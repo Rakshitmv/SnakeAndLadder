@@ -33,6 +33,10 @@ namespace SnakeAndLadder
 
                     case SNAKE:
                         playerPosition -= diceOutCome;
+                        if (playerPosition < 0)
+                        {
+                            playerPosition = 0;
+                        }
                         break;
                     default:
                         Console.WriteLine("please enter correct option\n");
