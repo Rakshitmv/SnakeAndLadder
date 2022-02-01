@@ -9,7 +9,7 @@ namespace SnakeAndLadder
     public class SnakeAndLadder
     {
         const int NO_PLAY = 0, LADDER = 1, SNAKE = 2, WINNING_POSITION = 100;
-        int playerPosition = 0;
+        int playerPosition = 0, count = 0;
         public void Play()
         {
             Console.WriteLine("The game has begin");
@@ -41,13 +41,15 @@ namespace SnakeAndLadder
                     default:
                         Console.WriteLine("please enter correct option\n");
                         break;
-                        
+
 
 
                 }
+                count++;
+                Console.WriteLine("Player position is: " + playerPosition);
 
-                Console.WriteLine("Option is: " + option + "\nPlayer position is: " + playerPosition);
             }
+            Console.WriteLine("\nNumber of times dice was rolled : " + count + "\n");
         }
     }
 }
