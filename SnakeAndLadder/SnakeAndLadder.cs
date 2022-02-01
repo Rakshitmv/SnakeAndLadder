@@ -8,15 +8,33 @@ namespace SnakeAndLadder
 {
     public class SnakeAndLadder
     {
+        const int NO_PLAY = 0, LADDER = 1, SNAKE = 2;
+        int playerPosition = 0;
         public void Play()
         {
-
-            int startPosition = 0;
             Console.WriteLine("The game has begin");
             Random random = new Random();
             int diceOutCome = random.Next(1, 7);
-            Console.WriteLine("The dice result is: " + diceOutCome);
+            Console.WriteLine("The dice results is: " + diceOutCome);
 
+            int option = random.Next(0, 3);
+
+            switch (option)
+            {
+                case NO_PLAY:
+                    break;
+
+                case LADDER:
+                    playerPosition += diceOutCome;
+                    break;
+
+                case SNAKE:
+                    playerPosition -= diceOutCome;
+                    break;
+
+            }
+
+            Console.WriteLine("Option is: " + option + "\nPlayer position is: " + playerPosition);
         }
     }
 }
