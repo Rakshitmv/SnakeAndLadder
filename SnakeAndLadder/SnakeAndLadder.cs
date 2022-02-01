@@ -13,6 +13,9 @@ namespace SnakeAndLadder
 
             int startPosition = 0;
             Console.WriteLine("The game has begin");
+            Random random = new Random();
+            int diceOutCome = random.Next(1, 7);
+            Console.WriteLine("The dice result is: " + diceOutCome);
 
         }
     }
